@@ -10,6 +10,7 @@ como botôes que alternam textos e elementos de renderização rápida
 - Para usarmos o PHP dentro de tags usamos - < ?php echo 'Elemento' ? >
 
 <h3>Tipos de dados</h3>
+
   - String
   - Boolean
   - Integer (Somente números inteiros)
