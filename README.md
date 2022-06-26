@@ -4,9 +4,13 @@ O PHP é uma linguagem que funciona do lado do servidor<br>
 sendo assim não é possivel criar certas funcionalidades<br>
 como botôes que alternam textos e elementos de renderização rápida
 
-- Para concatenar usamos o .
-- Somente aspas duplas podem carregar variaveis
-- Para usar variaveis globais em funções usamos - global $var
+- $var - Para variaveis
+- define('Nome', 'Valor') - Para constantes ( Podem ser usadas em funções sem o global )
+<br>
+
+- Para concatenar usamos o .<br>
+- Somente aspas duplas podem carregar variaveis<br>
+- Para usar variaveis globais em funções usamos - global $var<br>
 - Para usarmos o PHP dentro de tags usamos - < ?php echo 'Elemento' ? >
 
 <h3>Tipos de dados</h3>
