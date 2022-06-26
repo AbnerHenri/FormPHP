@@ -24,3 +24,12 @@ como botôes que alternam textos e elementos de renderização rápida
 
 <h3>var_dump()</h3> É usado para saber o tipo de uma variavel, ou para saber<br>
 a quantidade de letras de uma string
+
+<h3>DO...WHILE</h3>
+
+Funciona semelhante ao while mas a primeira condição vem antes do loop.<br>
+Vai executar a primeira linha de código mesmo que a condiçã de while for falsa <br>
+<br>
+do { <br>
+  echo 'Primeira condição';<br>
+}while(1 != 2)
