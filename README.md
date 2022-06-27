@@ -22,8 +22,14 @@ como botôes que alternam textos e elementos de renderização rápida
   - Array
   - Object
 
-<h3>var_dump()</h3> É usado para saber o tipo de uma variavel, ou para saber<br>
-a quantidade de letras de uma string
+Arrays podem conter chaves e se comportar semelhante<br>
+aos objetos em JavaScript e podemos chamar seus valores com<br>
+o nome da chave
+
+$carros = array(
+  "carro1"=>"Corsa",
+  "carro2"=>"Palio"
+)
 
 <h3>DO...WHILE</h3>
 
@@ -33,3 +39,7 @@ Vai executar a primeira linha de código mesmo que a condiçã de while for fals
 do { <br>
   echo 'Primeira condição';<br>
 }while(1 != 2)
+
+<br>
+
+
