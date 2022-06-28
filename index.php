@@ -1,23 +1,10 @@
 <?php
-
-    class Linguagens {
-        public $name;
-        public $framework;
-        public function __construct($name, $framework){
-            $this->name = $name;
-            $this->framework = $framework;
-        } 
-
-        public function message(){
-            echo "A linguagem é $this->name<br>";
-            echo "O Framework é $this->framework";
-        }
-    }
-
-    $leaguage1 = new Linguagens('JS', 'NextJs');
-    $leaguage2 = new Linguagens('PHP', 'Laravel');
-    $leaguage3 = new Linguagens('Python', 'Django');
-
+    $alunos = array(
+        "Aluno 1"=>"Abner",
+        "Aluno 2"=>"José",
+        "Aluno 3"=>"Giovanna",
+        "Aluno 4"=>"Larissa"
+    )
 ?>
 
 <!DOCTYPE html>
@@ -30,7 +17,9 @@
 </head>
 <body>
     <?php 
-        echo $leaguage3->message();
+        foreach($alunos as $key => $value){
+            echo "<strong>$key</strong> : $value<br>";
+        }
     ?>
 </body>
 </html>
