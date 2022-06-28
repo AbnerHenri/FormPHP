@@ -1,11 +1,3 @@
-<?php
-if(isset($_GET['nome'])){
-    $nome = $_GET['nome'];
-}else{
-    $nome = 'Mundo';
-} 
-?>
-
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -15,12 +7,11 @@ if(isset($_GET['nome'])){
     <title>Learning PHP</title>
 </head>
 <body>
-    <h1>
-        Olá <?php echo $nome ?>
-    </h1>
-    <a href='index.php?nome=Abner'>Ir para Abner</a><br>
-    <a href='index.php?nome=José'>Ir para José</a><br>
-    <a href='index.php?nome=Larissa'>Ir para Larissa</a><br>
+    <form method="get" action="require.php">
+        <input type="text" name="name" placeholder="Usuário" />
+        <input type="password" name="password" placeholder="Senha" />
+        <button>Enviar</button>
+    </form>
 </body>
 </html>
 
