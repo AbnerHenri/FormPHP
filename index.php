@@ -7,7 +7,7 @@
     <title>Learning PHP</title>
 </head>
 <body>
-    <form method="get" action="require.php">
+    <form method="post" action="require.php">
         <input type="text" name="name" placeholder="Usuário" />
         <input type="password" name="password" placeholder="Senha" />
         <button>Enviar</button>
