@@ -29,10 +29,16 @@
                 <input type="text" name="confirm" placeholder="Repita a senha" />
                 <span></span>
             </div>
+
+            <button>Enviar</button>
         </div>
 
         <div class="Welcome">
-             
+            <p>
+                <span style="font-size : 22px">Seja Muito</span> 
+                <br>Bem-Vindo
+            </p>
+            <img src="./Assets/Conect.svg" />
         </div>
     </div>
 </body>
