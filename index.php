@@ -12,22 +12,22 @@
         <div class="Login">
             <div class="Name Input">
                 <input type="text" name="name" placeholder="Nome" />
-                <span>Erro Nome</span>
+                <span></span>
             </div>
 
             <div class="Email Input">
                 <input type="text" name="email" placeholder="E-mail" />
-                <span>Erro E-mail</span>
+                <span></span>
             </div>
 
             <div class="Password Input">
                 <input type="text" name="password" placeholder="Password" />
-                <span>Erro Password</span>
+                <span></span>
             </div>
 
             <div class="Confirm Input">
                 <input type="text" name="confirm" placeholder="Repita a senha" />
-                <span>Erro Confirm</span>
+                <span></span>
             </div>
         </div>
 
