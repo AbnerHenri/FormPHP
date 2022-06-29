@@ -27,7 +27,17 @@ body {
     height : 100%;
 
     background : #219ebc;
+}
 
+.Login > p {
+    position : absolute;
+
+    font-size : 55px;
+    font-family : arial;
+    font-weight : 700;
+
+    top : -25px;
+    color : #F0FFFF;
 }
 
 .Input {
@@ -37,6 +47,7 @@ body {
     width : 70%;
     margin : 10px;
 
+    transform : translateY(20px)
 }
 
 /* ---------------------------------------------------------------------------- */
@@ -49,19 +60,16 @@ body {
 
 .Welcome > img {
     width : 80%;
-    transform : translate(15%, 80%)
+    transform : translate(15%, 30%)
 }
 
 .Welcome > p {
-    position : absolute;
 
-    font-size : 45px;
+    font-size : 35px;
     font-family : arial;
     font-weight : 700;
     letter-spacing : 3px;
     text-align : center;
-
-    transform : translateX(50%)
 }
 
 
