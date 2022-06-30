@@ -69,6 +69,17 @@
 
         return $valor;
     }
+
+    function addClass($status){
+
+        $class = '';
+
+        if($status !== ''){
+            $class = 'Invalid';
+        }
+
+        echo "class='$class'";
+    }
 ?>
 
 <!DOCTYPE html>
@@ -87,22 +98,22 @@
             <p>Entre</p>
 
             <div class="Name Input">
-                <input type="text" name="name" placeholder="Nome" />
+                <input type="text" <?php addClass($nameMessage) ?> name="name" placeholder="Nome" />
                 <span class="Error"><?php echo $nameMessage ?></span>
             </div>
 
             <div class="Email Input">
-                <input type="text" name="email" placeholder="E-mail" />
+                <input type="text" <?php addClass($emailMessage) ?> name="email" placeholder="E-mail" />
                 <span class="Error"><?php echo $emailMessage ?></span>
             </div>
 
             <div class="Password Input">
-                <input type="text" name="password" placeholder="Password" />
+                <input type="text" <?php addClass($passwordMessage) ?> name="password" placeholder="Password" />
                 <span class="Error"><?php echo $passwordMessage ?></span>
             </div>
 
             <div class="Confirm Input">
-                <input type="text" name="confirm" placeholder="Repita a senha" />
+                <input type="text" <?php addClass($confirmMessage) ?> name="confirm" placeholder="Repita a senha" />
                 <span class="Error"><?php echo $confirmMessage ?></span>
             </div>
 
