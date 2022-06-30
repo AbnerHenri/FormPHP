@@ -89,8 +89,10 @@
     }
 
     // Readiciona os valores ao input
-    function keepInputs($value){
-        echo "value='$value'";
+    function keepInputs($req){
+        if(isset($_POST["$req"])){
+            echo $_POST["$req"];
+        }
     }
 ?>
 
@@ -110,22 +112,22 @@
             <p>Entre</p>
 
             <div class="Name Input">
-                <input type="text" <?php addClass($nameMessage) ?> name="name" <?php keepInputs($_POST['name']) ?> placeholder="Nome" />
+                <input type="text" <?php addClass($nameMessage) ?> name="name" <?php keepInputs("name") ?> placeholder="Nome" />
                 <span class="Error"><?php echo $nameMessage ?></span>
             </div>
 
             <div class="Email Input">
-                <input type="text" <?php addClass($emailMessage) ?> name="email" <?php keepInputs($_POST['email']) ?> placeholder="E-mail" />
+                <input type="text" <?php addClass($emailMessage) ?> name="email" <?php keepInputs("email") ?> placeholder="E-mail" />
                 <span class="Error"><?php echo $emailMessage ?></span>
             </div>
 
             <div class="Password Input">
-                <input type="text" <?php addClass($passwordMessage) ?> name="password" <?php keepInputs($_POST['password']) ?> placeholder="Password" />
+                <input type="text" <?php addClass($passwordMessage) ?> name="password" <?php keepInputs("password") ?> placeholder="Password" />
                 <span class="Error"><?php echo $passwordMessage ?></span>
             </div>
 
             <div class="Confirm Input">
-                <input type="text" <?php addClass($confirmMessage) ?> name="confirm" <?php keepInputs($_POST['confirm']) ?> placeholder="Repita a senha" />
+                <input type="text" <?php addClass($confirmMessage) ?> name="confirm" <?php keepInputs("confirm") ?> placeholder="Repita a senha" />
                 <span class="Error"><?php echo $confirmMessage ?></span>
             </div>
 
