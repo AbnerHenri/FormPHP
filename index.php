@@ -12,7 +12,7 @@
         if(empty($_POST['name'])){
             $nameMessage = 'Campo obrigatório';
         }else{
-            
+
             $name = reformText($_POST['name']);
 
             // Verifica se no campo há apenas letras e espaços
@@ -44,6 +44,17 @@
             // Verifica se a senha tem menos de 7 caracteres
             if(strlen($senha) < 7){
                 $passwordMessage = 'Senha muito curta';
+            }
+        }
+
+        if(empty($_POST['confirm'])){
+            $confirmMessage = 'Campo Obrigatório';
+        }else{
+
+            $confirm = reformText($_POST['confirm']);
+
+            if($senha !== $confirm){
+                $confirmMessage = 'As senhas não coincidem';
             }
         }
     }
