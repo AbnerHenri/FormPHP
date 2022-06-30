@@ -59,7 +59,13 @@
                 $confirmMessage = 'As senhas não coincidem';
             }
         }
+
+        if(($nameMessage=="") && ($emailMessage=="") && ($passwordMessage=="") && ($confirmMessage=="")){
+            header('Location: dados.php');
+        }
     }
+
+
 
     // Impede Scripts de serem passados no input
     function reformText($valor){
@@ -70,6 +76,7 @@
         return $valor;
     }
 
+    // Adiciona a classe aos inputs
     function addClass($status){
 
         $class = '';
@@ -79,6 +86,11 @@
         }
 
         echo "class='$class'";
+    }
+
+    // Readiciona os valores ao input
+    function keepInputs($value){
+        echo "value='$value'";
     }
 ?>
 
@@ -98,22 +110,22 @@
             <p>Entre</p>
 
             <div class="Name Input">
-                <input type="text" <?php addClass($nameMessage) ?> name="name" placeholder="Nome" />
+                <input type="text" <?php addClass($nameMessage) ?> name="name" <?php keepInputs($_POST['name']) ?> placeholder="Nome" />
                 <span class="Error"><?php echo $nameMessage ?></span>
             </div>
 
             <div class="Email Input">
-                <input type="text" <?php addClass($emailMessage) ?> name="email" placeholder="E-mail" />
+                <input type="text" <?php addClass($emailMessage) ?> name="email" <?php keepInputs($_POST['email']) ?> placeholder="E-mail" />
                 <span class="Error"><?php echo $emailMessage ?></span>
             </div>
 
             <div class="Password Input">
-                <input type="text" <?php addClass($passwordMessage) ?> name="password" placeholder="Password" />
+                <input type="text" <?php addClass($passwordMessage) ?> name="password" <?php keepInputs($_POST['password']) ?> placeholder="Password" />
                 <span class="Error"><?php echo $passwordMessage ?></span>
             </div>
 
             <div class="Confirm Input">
-                <input type="text" <?php addClass($confirmMessage) ?> name="confirm" placeholder="Repita a senha" />
+                <input type="text" <?php addClass($confirmMessage) ?> name="confirm" <?php keepInputs($_POST['confirm']) ?> placeholder="Repita a senha" />
                 <span class="Error"><?php echo $confirmMessage ?></span>
             </div>
 
