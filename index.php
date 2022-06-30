@@ -12,12 +12,29 @@
         if(empty($_POST['name'])){
             $nameMessage = 'Campo obrigatório';
         }else{
+
+            // Limpa o campo para evitar SQL Injection
             $name = reformText($_POST['name']);
 
             // Verifica se no campo há apenas letras e espaços
             if(!preg_match("/^[a-zA-Z' ]*$/", $nome)){
                 $nameMessage = 'Aceitamos apenas letras e espaços';
             }
+        }
+
+        // Verifica se o E-mail está vazio
+        if(empty($_POST['email'])){
+            $emailMessage = 'Campo Obrigatório';
+        }else{
+
+            // Limpa o campo para evitar SQL Injection
+            $email = reformText($_POST['email']);
+
+            // Filtra o texto para confirmar se é um e-mail válido
+            if(!filter_var($email, FILTER_VALIDATE_EMAIL)){
+                $emailMessage = 'E-mail inválido';
+            }
+                
         }
     }
 
