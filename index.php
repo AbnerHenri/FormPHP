@@ -1,5 +1,6 @@
 <?php
 
+    $serverStatus = false;
     $nameMessage = '';
     $emailMessage = '';
     $passwordMessage = '';
@@ -61,7 +62,7 @@
         }
 
         if(($nameMessage=="") && ($emailMessage=="") && ($passwordMessage=="") && ($confirmMessage=="")){
-            header('Location: dados.php');
+           $serverStatus = !$serverStatus;
         }
     }
 
@@ -90,9 +91,15 @@
 
     // Readiciona os valores ao input
     function keepInputs($req){
+        $value = '';
         if(isset($_POST["$req"])){
-            echo $_POST["$req"];
+            $value = $_POST["$req"];
+            echo "value='$value'";
         }
+    }
+
+    function Redirect($page){
+        echo "action='$page'";
     }
 ?>
 
@@ -102,12 +109,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./styleHome.css" />
     <title>Login</title>
 </head>
 <body>
     <div class="Container">
-        <form class="Login" method="POST">
+        <form class="Login" method="POST" <?php if($serverStatus == true){ echo Redirect('dados.php'); } ?> > 
 
             <p>Entre</p>
 
@@ -131,7 +138,7 @@
                 <span class="Error"><?php echo $confirmMessage ?></span>
             </div>
 
-            <button type='submit'>Enviar</button>
+            <button>Enviar</button>
         </form>
 
         <div class="Welcome">
