@@ -1,7 +1,24 @@
 <?php
+
+    $nameMessage = '';
+    $emailMessage = '';
+    $passwordMessage = '';
+    $confirmMessage = '';
+
     // Pra quando existir uma requisição tipo POST
     if($_SERVER['REQUEST_METHOD'] == "POST"){
 
+        // Verificar se o post nome está vazio
+        if(empty($_POST['name'])){
+            $nameMessage = 'Campo obrigatório';
+        }else{
+            $name = reformText($_POST['name']);
+
+            // Verifica se no campo há apenas letras e espaços
+            if(!preg_match("/^[a-zA-Z' ]*$/", $nome)){
+                $nameMessage = 'Aceitamos apenas letras e espaços';
+            }
+        }
     }
 
     // Impede Scripts de serem passados no input
