@@ -16,7 +16,7 @@
             $name = reformText($_POST['name']);
 
             // Verifica se no campo há apenas letras e espaços
-            if(!preg_match("/^[a-zA-Z' ]*$/", $nome)){
+            if(!preg_match("/^[a-zA-Z' ]*$/", $name)){
                 $nameMessage = 'Aceitamos apenas letras e espaços';
             }
         }
@@ -39,21 +39,23 @@
             $passwordMessage = 'Campo Obrigatório';
         }else{
 
-            $senha = reformText($_POST['password']);
+            $password = reformText($_POST['password']);
 
             // Verifica se a senha tem menos de 7 caracteres
-            if(strlen($senha) < 7){
+            if(strlen($password) < 7){
                 $passwordMessage = 'Senha muito curta';
             }
         }
 
+        // Verifica se o campo está vazio
         if(empty($_POST['confirm'])){
             $confirmMessage = 'Campo Obrigatório';
         }else{
 
             $confirm = reformText($_POST['confirm']);
 
-            if($senha !== $confirm){
+            // Verifica se as senha são iguais
+            if($password !== $confirm){
                 $confirmMessage = 'As senhas não coincidem';
             }
         }
@@ -80,32 +82,32 @@
 </head>
 <body>
     <div class="Container">
-        <div class="Login">
+        <form class="Login" method="POST">
 
             <p>Entre</p>
 
             <div class="Name Input">
                 <input type="text" name="name" placeholder="Nome" />
-                <span class="Error"></span>
+                <span class="Error"><?php echo $nameMessage ?></span>
             </div>
 
             <div class="Email Input">
                 <input type="text" name="email" placeholder="E-mail" />
-                <span class="Error"></span>
+                <span class="Error"><?php echo $emailMessage ?></span>
             </div>
 
             <div class="Password Input">
                 <input type="text" name="password" placeholder="Password" />
-                <span class="Error"></span>
+                <span class="Error"><?php echo $passwordMessage ?></span>
             </div>
 
             <div class="Confirm Input">
                 <input type="text" name="confirm" placeholder="Repita a senha" />
-                <span class="Error"></span>
+                <span class="Error"><?php echo $confirmMessage ?></span>
             </div>
 
-            <button>Enviar</button>
-        </div>
+            <button type='submit'>Enviar</button>
+        </form>
 
         <div class="Welcome">
             <p>

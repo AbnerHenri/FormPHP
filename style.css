@@ -36,8 +36,14 @@ body {
     font-family : arial;
     font-weight : 700;
 
-    top : -25px;
+    top : -45px;
     color : #F0FFFF;
+}
+
+.Login  span {
+    margin : 5px;
+    color : #cc0000;
+    text-align : center;
 }
 
 .Input {
@@ -83,10 +89,6 @@ input {
 
 input::placeholder {
     text-align : center;
-}
-
-span {
-    margin : 5px;
 }
 
 button {
