@@ -64,7 +64,7 @@ body {
 }
 
 .Welcome > p {
-
+    color : #219ebc;
     font-size : 35px;
     font-family : arial;
     font-weight : 700;
@@ -81,6 +81,10 @@ input {
     border-radius : 25px;
 }
 
+input::placeholder {
+    text-align : center;
+}
+
 span {
     margin : 5px;
 }
@@ -92,6 +96,12 @@ button {
 
     border-radius : 25px;
     transform : translateY(35px);
+    background : white;
 
     cursor : pointer;
+
+    font-size : 19px;
+    font-weight : 600;
+    letter-spacing : 2px;
+    color : #219ebc;
 }

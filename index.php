@@ -1,3 +1,19 @@
+<?php
+    // Pra quando existir uma requisição tipo POST
+    if($_SERVER['REQUEST_METHOD'] == "POST"){
+
+    }
+
+    // Impede Scripts de serem passados no input
+    function reformText($valor){
+        $valor = trim($valor);
+        $valor = stripslashes($valor);
+        $valor = htmlspecialchars($valor);
+
+        return $valor;
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -15,22 +31,22 @@
 
             <div class="Name Input">
                 <input type="text" name="name" placeholder="Nome" />
-                <span></span>
+                <span class="Error"></span>
             </div>
 
             <div class="Email Input">
                 <input type="text" name="email" placeholder="E-mail" />
-                <span></span>
+                <span class="Error"></span>
             </div>
 
             <div class="Password Input">
                 <input type="text" name="password" placeholder="Password" />
-                <span></span>
+                <span class="Error"></span>
             </div>
 
             <div class="Confirm Input">
                 <input type="text" name="confirm" placeholder="Repita a senha" />
-                <span></span>
+                <span class="Error"></span>
             </div>
 
             <button>Enviar</button>
