@@ -2,10 +2,12 @@
 
     $name = '';
     $email = '';
+    $password = '';
 
-    if(isset($_POST['name']) && (isset($_POST['email']))){
+    if(isset($_POST['name']) && (isset($_POST['email']) && (isset($_POST['password'])))){
         $name = $_POST['name'];
         $email = $_POST['email'];
+        $password = $_POST['password'];
     }
 ?>
 
@@ -27,6 +29,10 @@
 
         <div class="Login">
             <div class="Card"><span>Seu Nome : </span><?php echo $name ?></div>
+            <div class="Card"><span>Seu E-mail : </span><?php echo $email ?></div>
+            <div class="Card"><span>Sua Senha : </span><?php echo $password ?></div>
+
+            <button><a href="/Form">Voltar</a></button>
         </div>
     </div>
 </body>

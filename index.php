@@ -62,10 +62,9 @@
         }
 
         if(($nameMessage=="") && ($emailMessage=="") && ($passwordMessage=="") && ($confirmMessage=="")){
-           $serverStatus = !$serverStatus;
+           $serverStatus = true;
         }
     }
-
 
 
     // Impede Scripts de serem passados no input
@@ -99,6 +98,7 @@
     }
 
     function Redirect($page){
+
         echo "action='$page'";
     }
 ?>
@@ -114,7 +114,7 @@
 </head>
 <body>
     <div class="Container">
-        <form class="Login" method="POST" <?php if($serverStatus == true){ echo Redirect('dados.php'); } ?> > 
+        <form class="Login" method="POST" <?php if($serverStatus == true){ echo Redirect('dados.php'); }else{ echo "action=''"; } ?> > 
 
             <p>Entre</p>
 
@@ -129,16 +129,16 @@
             </div>
 
             <div class="Password Input">
-                <input type="text" <?php addClass($passwordMessage) ?> name="password" <?php keepInputs("password") ?> placeholder="Password" />
+                <input type="password" <?php addClass($passwordMessage) ?> name="password" <?php keepInputs("password") ?> placeholder="Password" />
                 <span class="Error"><?php echo $passwordMessage ?></span>
             </div>
 
             <div class="Confirm Input">
-                <input type="text" <?php addClass($confirmMessage) ?> name="confirm" <?php keepInputs("confirm") ?> placeholder="Repita a senha" />
+                <input type="password" <?php addClass($confirmMessage) ?> name="confirm" <?php keepInputs("confirm") ?> placeholder="Repita a senha" />
                 <span class="Error"><?php echo $confirmMessage ?></span>
             </div>
 
-            <button>Enviar</button>
+            <button type="submit">Enviar</button>
         </form>
 
         <div class="Welcome">

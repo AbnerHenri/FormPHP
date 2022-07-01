@@ -26,6 +26,7 @@
     background : #F0FFFF;
 
     color : #4040ff;
+    margin-top : 45px; 
 
     font-family : arial;
     font-size : 25px;
@@ -34,6 +35,15 @@
 .Card > span {
     color : #4040ff;
     font-weight : 700;
+}
+
+/* ---------------------------------------------------------- */
+
+a {
+    width : 100%;
+    height : 100%;
+    text-decoration : none;
+    color : unset;
 }
 
 
