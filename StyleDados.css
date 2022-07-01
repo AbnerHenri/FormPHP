@@ -1,2 +1,39 @@
-@import './styleHome.css'
+@import './styleHome.css';
+
+.Welcome {
+    display : flex;
+
+    flex-direction : column;
+    align-items : center;
+}
+
+.Welcome > img {
+    width : 65%;
+    transform : translate(0, 25%)
+}
+
+.Card {
+    display : flex;
+    justify-content : space-evenly;
+    align-items : center;
+
+    width : 90%;
+    height : 60px;
+
+    border : 1px solid white;
+    border-radius : 0px 18px 0px 18px;
+    box-shadow : 0px 0px 7px 0px black;
+    background : #F0FFFF;
+
+    color : #4040ff;
+
+    font-family : arial;
+    font-size : 25px;
+}
+
+.Card > span {
+    color : #4040ff;
+    font-weight : 700;
+}
+
 

@@ -21,11 +21,12 @@
 <body>
     <div class="Container">
         <div class="Welcome">
-            
+            <img src='./Assets/DataOne (1).svg' />
+            <img src="./Assets/DataOne (2).svg" />
         </div>
 
         <div class="Login">
-
+            <div class="Card"><span>Seu Nome : </span><?php echo $name ?></div>
         </div>
     </div>
 </body>
